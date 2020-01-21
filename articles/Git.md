@@ -1,14 +1,10 @@
----
-Autor: Vinícius Bohrer dos Santos
----
-
 # Git
 
 ## O que é o Git e GitHub
 
 O **Git** é um sistema open-source de controle de versão utilizado pela grande maioria dos desenvolvedores atualmente. Com ele podemos criar todo histórico de alterações no código do nosso projeto e facilmente voltar para qualquer ponto para saber como o código estava naquela data.
 
-Já o **Github**, que será usado nos exemplos, é um site que permite que você hospede seus repositórios (projetos) usando o Git lá. Outras pessoas podem ver seus projetos, baixa-los, olhar o seu código. E você também pode ver o código dos outros, participar de projetos e *seguir* outros desenvolvedores.
+Já o **Github**, que será usado nos exemplos, é um site que permite que você hospede seus repositórios (projetos) usando o Git lá. Outras pessoas podem ver seus projetos, baixa-los, olhar o seu código. E você também pode ver o código dos outros, participar de projetos e _seguir_ outros desenvolvedores.
 
 ## Instalando Git
 
@@ -28,20 +24,20 @@ Pra instalar o Git no Windows é só baixar o executável [aqui](https://git-scm
 
 ### No MacOS
 
- Um instalador OSX Git é mantido e disponível para download [aqui](http://git-scm.com/download/mac).
+Um instalador OSX Git é mantido e disponível para download [aqui](http://git-scm.com/download/mac).
 
 ### Ajuda após a instalação
 
 ```shell
-git help			# Modo de uso e principais comandos
+git help   # Modo de uso e principais comandos
 
-git help -a			# Mostra todos os comandos disponíveis
-git help add		# explica o comando add
-git help commit		# explica o comando commit
+git help -a   # Mostra todos os comandos disponíveis
+git help add  # explica o comando add
+git help commit  # explica o comando commit
 
-git help -g			# Mostra alguns guias do próprio Git
-git help tutorial	# Abre "A tutorial introduction to Git"
-git help everyday	# Abre "A useful minimum set of commands for Eveyday Git"
+git help -g   # Mostra alguns guias do próprio Git
+git help tutorial # Abre "A tutorial introduction to Git"
+git help everyday # Abre "A useful minimum set of commands for Eveyday Git"
 ```
 
 ## Iniciando ou Retomando um projeto
@@ -84,11 +80,7 @@ Agora você é capaz de enviar suas alterações para o servidor remoto selecion
 git status
 ```
 
-
-
 ---
-
-
 
 ### Exemplo
 
@@ -98,11 +90,7 @@ Para clonar o projeto [projeto-trainee](https://github.com/wedersonf/projeto-tra
 git clone https://github.com/wedersonf/projeto-trainee
 ```
 
-
-
 ---
-
-
 
 ## Fluxo de trabalho
 
@@ -110,21 +98,19 @@ Seus repositórios locais consistem em três "árvores" mantidas pelo git.
 
 1. **Working Directory** que contém todas as pastas e arquivos do projeto com as últimas alterações.
 2. **Index/Staging Area** que funciona como uma área temporária.
-3. **HEAD/Local** que aponta para o último *commit* que você fez.
-
-
+3. **HEAD/Local** que aponta para o último _commit_ que você fez.
 
 ![](/home/armitage/Temporarios/Shared/DRIVE/CompAct Jr./Manual Git/git(3).png)
 
 ### Add & Commit
 
-Você pode propor mudanças (adicioná-las ao **Index**) usando: 
+Você pode propor mudanças (adicioná-las ao **Index**) usando:
 
 ```shell
 git add .
 ```
 
-Este é o primeiro passo no fluxo de trabalho básico do git. Para realmente confirmar estas mudanças (isto é, fazer um *commit*), use:
+Este é o primeiro passo no fluxo de trabalho básico do git. Para realmente confirmar estas mudanças (isto é, fazer um _commit_), use:
 
 ```shell
 git commit -m "comentários das alterações"
@@ -140,13 +126,9 @@ Suas alterações agora estão no **HEAD** da sua cópia de trabalho local. Para
 git push origin master
 ```
 
-Altere *master* para qualquer ramo (*branch*) desejado, enviando suas alterações para ele.
-
-
+Altere _master_ para qualquer ramo (_branch_) desejado, enviando suas alterações para ele.
 
 ---
-
-
 
 ### Exemplo
 
@@ -161,11 +143,7 @@ git commit -m "Site 100% responsivo"
 git push origin master
 ```
 
-
-
 ---
-
-
 
 ## Ramificando
 
@@ -174,23 +152,19 @@ git push origin master
 O **Branch** seria uma linha de desenvolvimento interna do projeto, ou seja, que apenas colaboradores podem criar e modificar. A ideia é que depois essa linha seja integrada com a linha principal do projeto. Resumindo: seria uma linha temporária de desenvolvimento.
 
 ```shell
-git branch nome-do-branch		# cria branch
-git checkout nome-do-branch		# muda pra branch
+git branch nome-do-branch  # cria branch
+git checkout nome-do-branch  # muda pra branch
 ```
 
 ```shell
-git checkout -b nome-do-branch	# cria e muda pro branch
+git checkout -b nome-do-branch # cria e muda pro branch
 ```
 
-O **branch *master*** é o branch "padrão" quando você cria um repositório. Use outros branches para desenvolver e mescle-os (***merge***) ao branch master após a conclusão.
+O **branch _master_** é o branch "padrão" quando você cria um repositório. Use outros branches para desenvolver e mescle-os (**_merge_**) ao branch master após a conclusão.
 
 ![Exemplo de ramificação](/home/armitage/Temporarios/Shared/DRIVE/CompAct Jr./Manual Git/git(19).png)
 
-
-
 ---
-
-
 
 ### Exemplo
 
@@ -212,11 +186,7 @@ git branch -d hotfix-bug53
 git push origin master
 ```
 
-
-
 ---
-
-
 
 ### Fork
 
@@ -236,7 +206,7 @@ O **pull** é o mais comum de ser utilizado. é uma boa prática sempre antes de
 
 ### Atualizar repositório
 
-Para atualizar seu repositório local com a mais nova versão (do repositório remoto), execute **git pull** na sua pasta de trabalho para *obter* a versão mais nova e *fazer merge* (mesclar) com as alterações locais.
+Para atualizar seu repositório local com a mais nova versão (do repositório remoto), execute **git pull** na sua pasta de trabalho para _obter_ a versão mais nova e _fazer merge_ (mesclar) com as alterações locais.
 
 ```shell
 git pull
@@ -244,7 +214,7 @@ git pull
 
 ### Unir branchs
 
-Para *juntar* um outro branch ao seu branch ativo/atual, use:
+Para _juntar_ um outro branch ao seu branch ativo/atual, use:
 
 ```shell
 git merge <nome_do_branch>
@@ -264,9 +234,7 @@ git checkout -- <nome_do_arquivo>
 
 O qual substitui as alterações no seu **Working Directory** com o conteúdo mais recente do **HEAD**. Alterações já adicionadas ao index, bem como novos arquivos serão mantidos.
 
-
-
-Se ao invés disso você deseja remover todas as alterações e *commits* locais, recupere o histórico mais recente do servidor e aponte para seu branch master local desta forma
+Se ao invés disso você deseja remover todas as alterações e _commits_ locais, recupere o histórico mais recente do servidor e aponte para seu branch master local desta forma
 
 ```shell
 git fetch origin
@@ -276,12 +244,12 @@ git reset --hard origin/master
 ## Referências
 
 - Instaladores:
-  - Linux: http://git-scm.com/download/linux
-  - Windows: https://git-scm.com/download/windows
-  - MacOS: https://git-scm.com/download/mac
-- https://git-scm.com/docs/user-manual.html
-- https://rogerdudler.github.io/git-guide/index.pt_BR.html
-- https://help.github.com/pt
+  - Linux: <http://git-scm.com/download/linux>
+  - Windows: <https://git-scm.com/download/windows>
+  - MacOS: <https://git-scm.com/download/mac>
+- <https://git-scm.com/docs/user-manual.html>
+- <https://rogerdudler.github.io/git-guide/index.pt_BR.html>
+- <https://help.github.com/pt>
 - Ramificação
-  - https://git-scm.com/book/pt-br/v1/Ramifica%C3%A7%C3%A3o-Branching-no-Git-B%C3%A1sico-de-Branch-e-Merge
+  - <https://git-scm.com/book/pt-br/v1/Ramifica%C3%A7%C3%A3o-Branching-no-Git-B%C3%A1sico-de-Branch-e-Merge>
 - visual guide: http://marklodato.github.io/visual-git-guide/index-en.html

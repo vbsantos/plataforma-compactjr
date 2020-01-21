@@ -1,8 +1,3 @@
----
-Autor: Vinícius Bohrer dos Santos
-Curso: Sololearn
----
-
 # SQL
 
 ## Introduction
@@ -24,7 +19,7 @@ The primary key's main features:
 - It must contain a **unique value** for each row.
 - It cannot contain **NULL** values.
 
-### What is SQL?
+### What is SQL
 
 **SQL** stands for **S**tructured **Q**uery **L**anguage. SQL can:
 
@@ -165,7 +160,7 @@ SELECT * FROM customers WHERE City NOT IN ('New York', 'Los Angeles', 'Chicago')
 ### The CONCAT Function
 
 The **CONCAT** function is used to concatenate two or more text values and returns the concatenating string.
-Let's concatenate the *FirstName* with the *City*, separating them with a *comma*:
+Let's concatenate the _FirstName_ with the _City_, separating them with a _comma_:
 
 ```sql
 SELECT CONCAT(FirstName, ', ' , City) FROM customers;
@@ -182,7 +177,7 @@ SELECT CONCAT(FirstName,', ', City) AS new_column FROM customers;
 
 ### Arithmetic Operators
 
-Arithmetic operators perform arithmetical operations on numeric operands. The Arithmetic operators include addition (+), subtraction (-), multiplication (*) and division (/).
+Arithmetic operators perform arithmetical operations on numeric operands. The Arithmetic operators include addition (+), subtraction (-), multiplication (\*) and division (/).
 
 ```sql
 SELECT ID, FirstName, LastName, Salary+500 AS Salary FROM employees;
@@ -231,8 +226,8 @@ As we already know the average, we can use a simple WHERE to list the salaries t
 SELECT FirstName, Salary FROM employees WHERE Salary > 3100 ORDER BY Salary DESC;
 ```
 
->The **DESC** keyword sorts results in **descending** order.
->Similarly, **ASC** sorts the results in **ascending** order.
+> The **DESC** keyword sorts results in **descending** order.
+> Similarly, **ASC** sorts the results in **ascending** order.
 
 A single subquery will return the same result more easily.
 
@@ -250,8 +245,8 @@ The **LIKE** keyword is useful when specifying a **search condition** within you
 SELECT column_name(s) FROM table_name WHERE column_name LIKE pattern;
 ```
 
-SQL **pattern** matching enables you to use "_" to match any single character and "%" to match an arbitrary number of characters (including zero characters).
-For example, to select employees whose *FirstNames* begin with the letter **A**, you would use the following query:
+SQL **pattern** matching enables you to use "\_" to match any single character and "%" to match an arbitrary number of characters (including zero characters).
+For example, to select employees whose _FirstNames_ begin with the letter **A**, you would use the following query:
 
 ```sql
 SELECT * FROM employees WHERE FirstName LIKE 'A%';
@@ -297,7 +292,7 @@ The following are the types of JOIN that can be used in MySQL:
 
   ```mysql
   SELECT column_name(s)
-  FROM table1 INNER JOIN table2 
+  FROM table1 INNER JOIN table2
   ON table1.column_name=table2.column_name;
   ```
 
@@ -364,7 +359,7 @@ UNION ALL
 SELECT ID, FirstName, LastName, City FROM Second;
 ```
 
->  The result set includes the duplicate rows as well.
+> The result set includes the duplicate rows as well.
 
 ### The INSERT Statement
 
@@ -378,13 +373,12 @@ VALUES (value1, value2, value3,...);
 ```
 
 > Make sure the order of the values is in the same order as the columns in the table.
-
 > When inserting records into a table using the SQL INSERT statement, you must provide a value for every column that does not have a default value, or does not support NULL.
 
 Alternatively, you can specify the table's column names in the INSERT INTO statement:
 
 ```mysql
-INSERT INTO Employees (ID, FirstName, LastName, Age) 
+INSERT INTO Employees (ID, FirstName, LastName, Age)
 VALUES (8, 'Anthony', 'Young', 35);
 ```
 
@@ -397,7 +391,7 @@ INSERT INTO Employees (ID, FirstName, LastName)
 VALUES (9, 'Samuel', 'Clark'); #forgeting age
 ```
 
-> The *Age* column for that row automatically became **0**, as that is its default value.
+> The _Age_ column for that row automatically became **0**, as that is its default value.
 
 ### The UPDATE Statement
 
@@ -418,7 +412,7 @@ You specify the column and its new value in a comma-separated list after the SET
 It is also possible to UPDATE multiple columns at the same time by comma-separating them:
 
 ```mysql
-UPDATE Employees 
+UPDATE Employees
 SET Salary=5000, FirstName='Robert'
 WHERE ID=1;
 ```
@@ -434,8 +428,8 @@ DELETE FROM Employees
 WHERE ID=1;
 ```
 
->If you omit the WHERE clause, **all** records in the table will be deleted!
->The DELETE statement removes the data from the table permanently.
+> If you omit the WHERE clause, **all** records in the table will be deleted!
+> The DELETE statement removes the data from the table permanently.
 
 ### Creating a Table
 
@@ -448,11 +442,11 @@ The basic syntax for the CREATE TABLE statement is as follows:
 ```mysql
 CREATE TABLE table_name
 (
-	column_name1 data_type(size),
-	column_name2 data_type(size),
-	column_name3 data_type(size),
-	....
-	columnN data_type(size)
+ column_name1 data_type(size),
+ column_name2 data_type(size),
+ column_name3 data_type(size),
+ ....
+ columnN data_type(size)
 );
 ```
 
@@ -474,7 +468,7 @@ The most common data types:
 
 ##### Date and Time
 
-- **DATE** - A date in *YYYY-MM-DD* format.
+- **DATE** - A date in _YYYY-MM-DD_ format.
 - **DATETIME** - A date and time combination in YYYY-MM-DD HH:MM:SS format.
 - **TIMESTAMP** - A timestamp, calculated from midnight, January 1, 1970
 - **TIME** - Stores the time in HH:MM:SS format.
@@ -493,12 +487,12 @@ Define it as a primary key during table creation, using the **PRIMARY KEY** keyw
 ```mysql
 USE minhaLandingPage;
 CREATE TABLE usuarios(
-	id INT AUTO_INCREMENT,
-	nome VARCHAR (100),
-	sobrenome VARCHAR (100),
-	email VARCHAR (200),
-	diretoria VARCHAR (20),
-	PRIMARY KEY (id)
+ id INT AUTO_INCREMENT,
+ nome VARCHAR (100),
+ sobrenome VARCHAR (100),
+ email VARCHAR (200),
+ diretoria VARCHAR (20),
+ PRIMARY KEY (id)
 );
 ```
 
@@ -510,12 +504,11 @@ CREATE TABLE usuarios(
 
 ```mysql
 CREATE TABLE Users (
-	id int NOT NULL AUTO_INCREMENT,
-	username varchar(40) NOT NULL, 
-	password varchar(10) NOT NULL,
-	PRIMARY KEY(id)
+ id int NOT NULL AUTO_INCREMENT,
+ username varchar(40) NOT NULL,
+ password varchar(10) NOT NULL,
+ PRIMARY KEY(id)
 );
 ```
 
 ### Alter, Drop, Rename a Table
-

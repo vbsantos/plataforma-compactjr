@@ -1,8 +1,3 @@
----
-Autor: Vinícius Bohrer
-Curso: Sololearn
----
-
 # HTML
 
 ## Básico
@@ -21,13 +16,13 @@ Exemplo:
 
 ```html
 <html>
-	<head>
-		<title>Paragraphs</title>
-	</head>
-	<body>
-		<p>Isso é um paragrafo.</p>
-		<p>Nesse paragrafo<br />pula linha.</p>
-	</body>
+  <head>
+    <title>Paragraphs</title>
+  </head>
+  <body>
+    <p>Isso é um paragrafo.</p>
+    <p>Nesse paragrafo<br />pula linha.</p>
+  </body>
 </html>
 ```
 
@@ -35,21 +30,21 @@ Exemplo:
 
 ```html
 <html>
-    <head>
-        <tile>Text Formatting</tile>
-    </head>
-    <body>
-        <p>This is regular text</p>
-        <p><b>This is bold text</b></p>
-        <p><big>This is big text</big></p>
-        <p><i>This is italic text</i></p>
-        <p><small>This is small text</small></p>
-        <p><strong>This is strong text</strong></p>
-        <p><sub>This is subscripted text</sub></p>
-        <p><sup>This is superscripted text</sup></p>
-        <p><ins>This is inserted text</ins></p>
-        <p><del>This is deleted text</del></p>
-    </body>
+  <head>
+    <tile>Text Formatting</tile>
+  </head>
+  <body>
+    <p>This is regular text</p>
+    <p><b>This is bold text</b></p>
+    <p><big>This is big text</big></p>
+    <p><i>This is italic text</i></p>
+    <p><small>This is small text</small></p>
+    <p><strong>This is strong text</strong></p>
+    <p><sub>This is subscripted text</sub></p>
+    <p><sup>This is superscripted text</sup></p>
+    <p><ins>This is inserted text</ins></p>
+    <p><del>This is deleted text</del></p>
+  </body>
 </html>
 ```
 
@@ -59,18 +54,19 @@ Seis níveis de título:
 
 ```html
 <html>
-    <head>
-        <title>Headings, Lines, Comments</title>
-    </head>
-	<body>
-        <h1>titulo 1</h1>
-        <h2>titulo 2</h2>
-        <h3>titulo 3</h3>
-        <hr /> <!--Comentário: Linha Horizontal-->
-        <h4>titulo 4</h4>
-        <h5>titulo 5</h5>
-        <h6>titulo 6</h6>
-    </body>
+  <head>
+    <title>Headings, Lines, Comments</title>
+  </head>
+  <body>
+    <h1>titulo 1</h1>
+    <h2>titulo 2</h2>
+    <h3>titulo 3</h3>
+    <hr />
+    <!--Comentário: Linha Horizontal-->
+    <h4>titulo 4</h4>
+    <h5>titulo 5</h5>
+    <h6>titulo 6</h6>
+  </body>
 </html>
 ```
 
@@ -82,63 +78,61 @@ Informações adicionais aos elementos.
 
 ```html
 <html>
-    <head>
-		<title>Attributes</title>
-    </head>
-    <body>
-        <!--Mesma hierarquia de títulos deste documento-->
-        <h1>HTML</h1>
-        <h2>Intermediário</h2>
-        <h3>Attributes</h3>
-        <!--Exemplo de "HTML attributes"-->
-        <p align="center">This text is aligned to center.</p>
-        <!--Exemplo usando medida em pixels-->
-        <hr width="50px" />
-        <!--Exemplo usando medida em porcentagem-->
-        <hr width="50%" />
-        <!--Exemplo usando mais de um atributo-->
-        <hr width="10%" align="right" />
-    </body>
+  <head>
+    <title>Attributes</title>
+  </head>
+  <body>
+    <!--Mesma hierarquia de títulos deste documento-->
+    <h1>HTML</h1>
+    <h2>Intermediário</h2>
+    <h3>Attributes</h3>
+    <!--Exemplo de "HTML attributes"-->
+    <p align="center">This text is aligned to center.</p>
+    <!--Exemplo usando medida em pixels-->
+    <hr width="50px" />
+    <!--Exemplo usando medida em porcentagem-->
+    <hr width="50%" />
+    <!--Exemplo usando mais de um atributo-->
+    <hr width="10%" align="right" />
+  </body>
 </html>
 ```
 
-
-
 ### Images
 
-Insere uma imagem na pagina, contém atributos. 
+Insere uma imagem na pagina, contém atributos.
 
 ```html
 <html>
-	<head>
-		<title>Images</title>
-	</head>
-	<body>
-        <!--No caso da imagem não poder sem mostrada no site, o atributo "alt" 
+  <head>
+    <title>Images</title>
+  </head>
+  <body>
+    <!--No caso da imagem não poder sem mostrada no site, o atributo "alt" 
 		especifica um texto que descreve a imagem. Esse atributo é obrigatório.-->
-		<img src="tree.jpg" height="150px" width="150px" alt="" />
-		<img src="tree.jpg" height="50%" width="50%" alt="" />
-		<!-- Navegadores como o IE exibem borda, a não ser que especifique. -->
-       <img src="tree.jpg" height="150px" width="150px" border="1px" alt="" />
-	</body>
+    <img src="tree.jpg" height="150px" width="150px" alt="" />
+    <img src="tree.jpg" height="50%" width="50%" alt="" />
+    <!-- Navegadores como o IE exibem borda, a não ser que especifique. -->
+    <img src="tree.jpg" height="150px" width="150px" border="1px" alt="" />
+  </body>
 </html>
 ```
 
 ### Links
 
-Ao clicar em "Learn Playing" você é redirecionado para "http://www.sololearn.com"
+Ao clicar em "Learn Playing" você é redirecionado para "<http://www.sololearn.com">
 
 ```html
 <html>
-	<head>
-		<title>Links</title>
-	</head>
-	<body>
-		<a href="http://www.sololearn.com"> Learn Playing </a>
-		<!--Giving a "_blank" value to your attribute will have the link open in
+  <head>
+    <title>Links</title>
+  </head>
+  <body>
+    <a href="http://www.sololearn.com"> Learn Playing </a>
+    <!--Giving a "_blank" value to your attribute will have the link open in
 		a new window or new tab.-->
-		<a href="http://www.sololearn.com" target="_blank"> Learn Playing </a>
-    </body>
+    <a href="http://www.sololearn.com" target="_blank"> Learn Playing </a>
+  </body>
 </html>
 ```
 
@@ -146,29 +140,29 @@ Ao clicar em "Learn Playing" você é redirecionado para "http://www.sololearn.c
 
 ```html
 <html>
-	<head>
-		<title>Lists</title>
-	</head>
-	<body>
-        <p>
-            Cores que eu mais gosto:
-        </p>
-		<!--Lista Numerada-->
-		<ol>
-			<li>Red</li>
-			<li>Blue</li>
-			<li>Green</li>
-		</ol>
-        <p>
-            Outras cores que também são legais:
-        </p>
-		<!--Lista Normal-->
-		<ul>
-			<li>Purple</li>
-			<li>Pink</li>
-			<li>Black</li>
-		</ul>  
-	</body>
+  <head>
+    <title>Lists</title>
+  </head>
+  <body>
+    <p>
+      Cores que eu mais gosto:
+    </p>
+    <!--Lista Numerada-->
+    <ol>
+      <li>Red</li>
+      <li>Blue</li>
+      <li>Green</li>
+    </ol>
+    <p>
+      Outras cores que também são legais:
+    </p>
+    <!--Lista Normal-->
+    <ul>
+      <li>Purple</li>
+      <li>Pink</li>
+      <li>Black</li>
+    </ul>
+  </body>
 </html>
 ```
 
@@ -254,22 +248,22 @@ Tabelas são definidas usando "table". Linhas são definidas utilizando "tr" (ta
 
 Em HTML os elementos são definidos como "**block-level**" ou "**inline**".
 
-"**Block-level**" começam de uma nova linha (pode conter elementos inline). 
+"**Block-level**" começam de uma nova linha (pode conter elementos inline).
 
-"**Inline**" normalmente aparecem sem quebra de linha (não pode conter elemento block-level). 
+"**Inline**" normalmente aparecem sem quebra de linha (não pode conter elemento block-level).
 
 O elemento `<div>` é comumente usado como container para outros elementos HTML.
 
 ```html
 <html>
-	<body>
-		<h1>Headline</h1>
-        <!--Nesse caso foi utilizado em conjunto com CSS-->
-		<div style="background-color:green; color:white; padding:20px;">
-			<p>Some paragraph text goes here.</p>
-			<p>Another paragraph goes here.</p>
-		</div>
-	</body>
+  <body>
+    <h1>Headline</h1>
+    <!--Nesse caso foi utilizado em conjunto com CSS-->
+    <div style="background-color:green; color:white; padding:20px;">
+      <p>Some paragraph text goes here.</p>
+      <p>Another paragraph goes here.</p>
+    </div>
+  </body>
 </html>
 ```
 
@@ -289,24 +283,24 @@ Usado para coletar informação dos usuários.
 
 ```html
 <html>
-    <head>
- 		<title>Forms</title>
- 	</head>
- 	<body>
- 		<form>
-            <!--The <input> tag has no end tag-->
-			<input type="text" name="username" /><br />
-			<input type="password" name="password" />
- 			<input type="radio" name="gender" value="male" />Male<br />
- 			<input type="radio" name="gender" value="female" />Female<br />
- 			<input type="checkbox" name="gender" value="1" />Male<br />
- 			<input type="checkbox" name="gender" value="2" />Female<br />
- 			<!--submits a form to its action attribute-->
- 			<input type="submit" value="Submit" />
- 			<!--After the form is submitted, the data should be processed
+  <head>
+    <title>Forms</title>
+  </head>
+  <body>
+    <form>
+      <!--The <input> tag has no end tag-->
+      <input type="text" name="username" /><br />
+      <input type="password" name="password" />
+      <input type="radio" name="gender" value="male" />Male<br />
+      <input type="radio" name="gender" value="female" />Female<br />
+      <input type="checkbox" name="gender" value="1" />Male<br />
+      <input type="checkbox" name="gender" value="2" />Female<br />
+      <!--submits a form to its action attribute-->
+      <input type="submit" value="Submit" />
+      <!--After the form is submitted, the data should be processed
 			on the server using a programming language, such as PHP.-->
- 		</form> 
- 	</body>
+    </form>
+  </body>
 </html>
 ```
 
@@ -316,18 +310,16 @@ Usado para coletar informação dos usuários.
 
 ```html
 <html>
- 	<head> 
- 		<title>first page</title>  
- 	</head>
- 	<body bgcolor="#000099">
- 		<h1>
- 			<font color="#FFFFFF">White headline</font>
- 		</h1> 
- 	</body>
+  <head>
+    <title>first page</title>
+  </head>
+  <body bgcolor="#000099">
+    <h1>
+      <font color="#FFFFFF">White headline</font>
+    </h1>
+  </body>
 </html>
 ```
-
-
 
 ### Frames
 
@@ -349,7 +341,7 @@ New in HTML5:
 - Date pickers, color pickers, and numeric stepper controls have been added.
 - Input field types now include email, search, and URL.
 - PUT and DELETE form methods are now supported.
-- **Integrated API** (Application Programming Interfaces) 
+- **Integrated API** (Application Programming Interfaces)
   - Drag and Drop
   - Audio and Video
   - Offline Web Applications
@@ -362,13 +354,13 @@ New in HTML5:
 
 In HTML, elements typically belonged in either the block level or inline content model. HTML5 introduces **seven** main content models.
 
-- Metadata: Content that sets up the presentation or behavior of the rest of the content. These elements are found in the **head** of the document. *Elements:* `\<base>, \<link>, \<meta>, \<noscript>, \<script>, \<style>, \<title>`
-- Embedded: Content that imports other resources into the document. *Elements:* `\<audio>, \<video>, \<canvas>, \<iframe>, \<img>, \<math>, \<object>, \<svg>`
-- Interactive: Content specifically intended for user interaction. *Elements:* \<a>, `\<audio>, \<video>, \<button>, \<details>, \<embed>, \<iframe>, \<img>, \<input>, \<label>, \<object>, \<select>, \<textarea>`
-- Heading:  Defines a section header. *Elements:* `\<h1>, \<h2>, \<h3>, \<h4>, \<h5>, \<h6>, \<hgroup>`
-- Phrasing: This model has a number of inline level elements in common with HTML4. *Elements:* `\<img>, \<span>, \<strong>, \<label>, \<br />, \<small>, \<sub>`, and more.
+- Metadata: Content that sets up the presentation or behavior of the rest of the content. These elements are found in the **head** of the document. _Elements:_ `\<base>, \<link>, \<meta>, \<noscript>, \<script>, \<style>, \<title>`
+- Embedded: Content that imports other resources into the document. _Elements:_ `\<audio>, \<video>, \<canvas>, \<iframe>, \<img>, \<math>, \<object>, \<svg>`
+- Interactive: Content specifically intended for user interaction. _Elements:_ \<a>, `\<audio>, \<video>, \<button>, \<details>, \<embed>, \<iframe>, \<img>, \<input>, \<label>, \<object>, \<select>, \<textarea>`
+- Heading: Defines a section header. _Elements:_ `\<h1>, \<h2>, \<h3>, \<h4>, \<h5>, \<h6>, \<hgroup>`
+- Phrasing: This model has a number of inline level elements in common with HTML4. _Elements:_ `\<img>, \<span>, \<strong>, \<label>, \<br />, \<small>, \<sub>`, and more.
 - Flow content: Contains the majority of HTML5 elements that would be included in the normal flow of the document.
-- Sectioning content: Defines the scope of headings, content, navigation, and footers. *Elements*: `\<article>, \<aside>, \<nav>, \<section>`
+- Sectioning content: Defines the scope of headings, content, navigation, and footers. _Elements_: `\<article>, \<aside>, \<nav>, \<section>`
 
 The various content models overlap in certain areas, depending on how they are being used.
 
@@ -392,11 +384,11 @@ The `nav` tag represents a section of a page that links to other pages or to cer
 
 ```html
 <nav>
-   <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">About us</a></li>
-   </ul>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">About us</a></li>
+  </ul>
 </nav>
 ```
 
@@ -418,9 +410,9 @@ The `footer` element is also widely used. Generally we refer to a section locate
 The `article` is a self-contained, independent piece of content that can be used and distributed separately from the rest of the page or site. This could be a forum post, a magazine or newspaper article, a blog entry, a comment, an interactive widget or gadget, or any other independent piece of content.
 
 ```html
-<article> 
-   <h1>The article title</h1> 
-   <p>Contents of the article element </p>
+<article>
+  <h1>The article title</h1>
+  <p>Contents of the article element</p>
 </article>
 ```
 
@@ -428,15 +420,15 @@ The `article` is a self-contained, independent piece of content that can be used
 
 The `section` is a logical container of the page or `article`. Sections can be used to divide up content within an article. For example, a homepage could have a section for introducing the company, another for news items, and still another for contact information.
 
-Each `section` should be identified, typically by including a heading (`h1`-`h6` element) as a child of the  element.
+Each `section` should be identified, typically by including a heading (`h1`-`h6` element) as a child of the element.
 
 ```html
 <article>
-   <h1>Welcome</h1>
-   <section>
-      <h1>Heading</h1>
-      <p>content or image</p>
-   </section>
+  <h1>Welcome</h1>
+  <section>
+    <h1>Heading</h1>
+    <p>content or image</p>
+  </section>
 </article>
 ```
 
@@ -446,11 +438,11 @@ The `aside` is a secondary or tangential content which could be considered separ
 
 ```html
 <article>
-   <h1> Gifts for everyone </h1>
-   <p> This website will be the best place for choosing gifts </p>
-   <aside>
-      <p> Gifts will be delivered to you within 24 hours </p>
-   </aside>
+  <h1>Gifts for everyone</h1>
+  <p>This website will be the best place for choosing gifts</p>
+  <aside>
+    <p>Gifts will be delivered to you within 24 hours</p>
+  </aside>
 </article>
 ```
 
@@ -460,9 +452,9 @@ The `aside` is a secondary or tangential content which could be considered separ
 
 ```html
 <audio controls autoplay loop>
-   <source src="audio.mp3" type="audio/mpeg">
-   <source src="audio.ogg" type="audio/ogg">
-   Audio element not supported by your browser. 
+  <source src="audio.mp3" type="audio/mpeg" />
+  <source src="audio.ogg" type="audio/ogg" />
+  Audio element not supported by your browser.
 </audio>
 ```
 
@@ -470,9 +462,9 @@ The `aside` is a secondary or tangential content which could be considered separ
 
 ```html
 <video controls autoplay loop>
-   <source src="video.mp4" type="video/mp4">
-   <source src="video.ogg" type="video/ogg">
-   Video is not supported by your browser
+  <source src="video.mp4" type="video/mp4" />
+  <source src="video.ogg" type="video/ogg" />
+  Video is not supported by your browser
 </video>
 ```
 
@@ -489,7 +481,7 @@ Status: <progress min="0" max="100" value="35"></progress>
 localStorage.setItem("key1", "value1");
 
 //Getting a Value:
-alert(localStorage.getItem("key1")); //this will print the value 
+alert(localStorage.getItem("key1")); //this will print the value
 
 //Removing a Value:
 localStorage.removeItem("key1");
@@ -559,7 +551,7 @@ It offers several methods for drawing paths, boxes, circles, text, and graphic i
 
 ```html
 <svg width="2000" height="2000">
-	<circle cx="80" cy="80" r="50" fill="green" />
+  <circle cx="80" cy="80" r="50" fill="green" />
 </svg>
 ```
 
@@ -575,8 +567,7 @@ It offers several methods for drawing paths, boxes, circles, text, and graphic i
 
 ```html
 <svg width="2000" height="2000">
-   <rect width="300" height="100" 
-     x="20" y="20" fill="green" />
+  <rect width="300" height="100" x="20" y="20" fill="green" />
 </svg>
 ```
 
@@ -584,19 +575,26 @@ It offers several methods for drawing paths, boxes, circles, text, and graphic i
 
 ```html
 <svg width="400" height="410">
-    <line x1="10" y1="10" x2="200" y2="100" 
-        style="stroke:#000000; stroke-linecap:round; 
-        stroke-width:20"  />
+  <line
+    x1="10"
+    y1="10"
+    x2="200"
+    y2="100"
+    style="stroke:#000000; stroke-linecap:round;
+        stroke-width:20"
+  />
 </svg>
 ```
 
-\<****polyline****> defines shapes built from multiple line definitions:
+\<\***\*polyline\*\***> defines shapes built from multiple line definitions:
 
 ```html
 <svg width="2000" height="500">
-    <polyline style="stroke-linejoin:miter; stroke:black; 
+  <polyline
+    style="stroke-linejoin:miter; stroke:black;
         stroke-width:12; fill: none;"
-        points="100 100, 150 150, 200 100" />
+    points="100 100, 150 150, 200 100"
+  />
 </svg>
 ```
 
@@ -605,7 +603,7 @@ You can independently change the horizontal and vertical axes of its radius, usi
 
 ```html
 <svg height="500" width="1000">
-   <ellipse cx="200" cy="100" rx="150" ry="70" style="fill:green" />
+  <ellipse cx="200" cy="100" rx="150" ry="70" style="fill:green" />
 </svg>
 ```
 
@@ -613,8 +611,10 @@ The `<polygon>` element is used to create a graphic with at least three sides. T
 
 ```html
 <svg width="2000" height="2000">
-<polygon points="100 100, 200 200, 300 0" 
-      style="fill: green; stroke:black;" />
+  <polygon
+    points="100 100, 200 200, 300 0"
+    style="fill: green; stroke:black;"
+  />
 </svg>
 ```
 
@@ -626,10 +626,16 @@ The example below creates a rectangle that will change its position in 3 seconds
 
 ```html
 <svg width="1000" height="250">
-<rect width="150" height="150" fill="orange">
-  <animate attributeName="x" from="0" to="300"
-    dur="3s" fill="freeze" repeatCount="2"/> 
-</rect>
+  <rect width="150" height="150" fill="orange">
+    <animate
+      attributeName="x"
+      from="0"
+      to="300"
+      dur="3s"
+      fill="freeze"
+      repeatCount="2"
+    />
+  </rect>
 </svg>
 ```
 
@@ -660,7 +666,7 @@ Define a path using the **d** attribute:
 
 ```html
 <svg width="500" height="500">
-<path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;  fill:none;" />
+  <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;  fill:none;" />
 </svg>
 ```
 
@@ -673,8 +679,7 @@ The HTML canvas is used to draw graphics that include everything from simple lin
 The \<**canvas**> element is defined by:
 
 ```html
-<canvas id="canvas1" width="200" height="100">
-</canvas>
+<canvas id="canvas1" width="200" height="100"> </canvas>
 ```
 
 The \<**canvas**> element is only a container for graphics. You must use a script to actually draw the graphics (usually JavaScript).
@@ -683,17 +688,15 @@ The \<**canvas**> element must have an **id attribute** so it can be referred to
 
 ```html
 <html>
-   <head></head>
-   <body>
-     <canvas id="canvas1" 
-   width="400" height="300"></canvas> 
+  <head></head>
+  <body>
+    <canvas id="canvas1" width="400" height="300"></canvas>
 
-   <script>
-      var can = document.getElementById("canvas1"); 
+    <script>
+      var can = document.getElementById("canvas1");
       var ctx = can.getContext("2d");
-   </script>
-
-   </body>
+    </script>
+  </body>
 </html>
 ```
 
@@ -715,21 +718,21 @@ Y coordinate increases toward the bottom of the canvas.
 
 The **fillRect(x, y, w, h)** method draws a "filled" rectangle, in which w indicates width and h indicates height. The default fill color is black.
 
-A black 100*100 pixel rectangle is drawn on the canvas at the position (20, 20):
+A black 100\*100 pixel rectangle is drawn on the canvas at the position (20, 20):
 
 ```javascript
 let c = document.getElementById("canvas1");
 let ctx = c.getContext("2d");
-ctx.fillRect(20,20,100,100);
+ctx.fillRect(20, 20, 100, 100);
 ```
 
 The **fillStyle** property is used to set a color, gradient, or pattern to fill the drawing.Using this property allows you to draw a green-filled rectangle.
 
 ```javascript
-var canvas=document.getElementById("canvas1");
-var ctx=canvas.getContext("2d");
-ctx.fillStyle ="rgba(0, 200, 0, 1)";
-ctx.fillRect (36, 10, 22, 22);
+var canvas = document.getElementById("canvas1");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "rgba(0, 200, 0, 1)";
+ctx.fillRect(36, 10, 22, 22);
 ```
 
 The canvas supports various other methods for drawing:
@@ -777,7 +780,7 @@ strokeText(text,x,y): Draws text on the canvas (no fill).
 \- Not suited for game applications
 \- Best suited for applications with large rendering areas (for example, Google Maps)
 
->You can actually use both SVG and canvas on the same page, if needed. However, you cannot just draw SVG onto a canvas, or vice-versa.
+> You can actually use both SVG and canvas on the same page, if needed. However, you cannot just draw SVG onto a canvas, or vice-versa.
 
 ## Canvas Transformations
 
@@ -787,8 +790,8 @@ strokeText(text,x,y): Draws text on the canvas (no fill).
 
 ```html
 <form>
-   <label>Your name:</label>
-   <input id="user" name="username" type="text" />
+  <label>Your name:</label>
+  <input id="user" name="username" type="text" />
 </form>
 ```
 
@@ -801,9 +804,9 @@ strokeText(text,x,y): Draws text on the canvas (no fill).
 
 ```html
 <form autocomplete="off">
-   <label for="e-mail">Your e-mail address: </label>
-   <input name="Email" type="text" required />
-   <input type="submit" value="Submit"/>
+  <label for="e-mail">Your e-mail address: </label>
+  <input name="Email" type="text" required />
+  <input type="submit" value="Submit" />
 </form>
 ```
 
@@ -854,9 +857,9 @@ The \<**datalist**> tag can be used to define a list of pre-defined options for 
 ```html
 <input id="car" type="text" list="colors" />
 <datalist id="colors">
-   <option value="Red">
-   <option value="Green">
-   <option value="Yellow">
+  <option value="Red"> </option>
+  <option value="Green"> </option>
+  <option value="Yellow"> </option>
 </datalist>
 ```
 
@@ -879,4 +882,3 @@ These are especially useful when opening a page on a modern mobile device, which
 ![img](https://api.sololearn.com/DownloadFile?id=2570)
 
 > These new types make it easier to structure and validate HTML forms.
-

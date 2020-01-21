@@ -1,7 +1,3 @@
----
-Autor: Vinícius Bohrer dos Santos
----
-
 # Programação Orientada a Objetos
 
 ## Abstract Class
@@ -25,4 +21,3 @@ O modificador private deixará visível o atributo apenas para a classe em que e
 ### Protected
 
 O modificador protected deixará visível o atributo para todas as outras classes e subclasses que pertencem ao mesmo pacote. A principal diferença é que apenas as classes do mesmo pacote tem acesso ao membro. O pacote da subclasse não tem acesso ao membro.
-

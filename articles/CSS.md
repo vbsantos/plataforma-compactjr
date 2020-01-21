@@ -1,8 +1,3 @@
----
-Autor: Vinícius Bohrer dos Santos
-Curso: Sololearn
----
-
 # CSS
 
 ## The Basics
@@ -13,8 +8,8 @@ Curso: Sololearn
 
 ```html
 <!--CSS code as HTML element attribute-->
-<p style="color:white; background-color:gray;"> 
-    This is an example of inline styling. 
+<p style="color:white; background-color:gray;">
+    This is an example of inline styling.
 </p>
 ```
 
@@ -45,18 +40,18 @@ O CSS pode ser utilizado integrado no HTML, entretanto não é indicado, assim c
 
 ```html
 <html>
-	<head>
+ <head>
         <title>External CSS file</title>
         <!--O arquivo "example.css" terá todas as informações 
 		referentes ao estilo, quanto o HTML terá somente o conteúdo 
 		do site propriamente dito-->
- 		<link rel="stylesheet" href="example.css">
-	</head>
-	<body>
-  		<p>This is my first paragraph.</p>
-   		<p>This is my second paragraph. </p>
-   		<p>This is my third paragraph. </p>
-	</body>
+   <link rel="stylesheet" href="example.css">
+ </head>
+ <body>
+    <p>This is my first paragraph.</p>
+     <p>This is my second paragraph. </p>
+     <p>This is my third paragraph. </p>
+ </body>
 </html>
 ```
 
@@ -79,8 +74,8 @@ Resultando em uma página assim:
 
 #### Syntax
 
-CSS is composed of style rules that the browser interprets and then applies to the corresponding elements in your document. 
-A style rule has three parts: **selector**, **property**, and **value**. 
+CSS is composed of style rules that the browser interprets and then applies to the corresponding elements in your document.
+A style rule has three parts: **selector**, **property**, and **value**.
 
 Por exemplo, a cor do título pode ser definida como:
 
@@ -129,9 +124,9 @@ p {
 
 #### Class Selectors
 
-Class selectors work in a similar way. The major difference is that <strong>IDs can only be applied once per page</strong>, while classes can be used as many times on a page as needed. 
+Class selectors work in a similar way. The major difference is that <strong>IDs can only be applied once per page</strong>, while classes can be used as many times on a page as needed.
 
-In the example below, both paragraphs having the class "first" will be affected by the CSS: 
+In the example below, both paragraphs having the class "first" will be affected by the CSS:
 
 ```html
 <div>
@@ -151,7 +146,7 @@ In the example below, both paragraphs having the class "first" will be affected 
 
 #### Descendant Selectores
 
-These selectors are used to select elements that are descendants of another element. When selecting levels, you can select as many levels deep as you need to. 
+These selectors are used to select elements that are descendants of another element. When selecting levels, you can select as many levels deep as you need to.
 
 For example, to target only \<em> elements in the first paragraph of the "intro" section:
 
@@ -167,9 +162,9 @@ For example, to target only \<em> elements in the first paragraph of the "intro"
 ```css
 #intro .first em { /* em -> ênfase (itálico) */
     /* Esse bloco cria uma regra para todos os elementos em
-	ênfase do primeiro parágrafo da introdução */
-	color: pink; 
-	background-color:gray;
+ ênfase do primeiro parágrafo da introdução */
+ color: pink;
+ background-color:gray;
 }
 ```
 
@@ -181,7 +176,7 @@ For example, to target only \<em> elements in the first paragraph of the "intro"
 
 #### Cascade
 
-The final appearance of a web page is a result of different styling rules. 
+The final appearance of a web page is a result of different styling rules.
 
 The three main sources of style information that form a cascade are:
 
@@ -193,23 +188,23 @@ The three main sources of style information that form a cascade are:
 
 #### Inheritance
 
-Inheritance refers to the way properties flow through the page. A child element will usually take on the characteristics of the parent element unless otherwise defined. 
+Inheritance refers to the way properties flow through the page. A child element will usually take on the characteristics of the parent element unless otherwise defined.
 
 ```html
 <html>
- 	<head>
- 		<!--Nesse bloco alteramos a cor e fonte de todos os
+  <head>
+   <!--Nesse bloco alteramos a cor e fonte de todos os
 		elementos dentro de <body>-->
- 		<style>
- 		body {
- 			color: green;
- 			font-family: Arial;
- 		}
- 		</style>
- 	</head>
- 	<body>       
- 		<p>This is a text inside the paragraph.</p>
- 	</body>
+   <style>
+   body {
+    color: green;
+    font-family: Arial;
+   }
+   </style>
+  </head>
+  <body>
+   <p>This is a text inside the paragraph.</p>
+  </body>
 </html>
 ```
 
@@ -221,18 +216,17 @@ Inheritance refers to the way properties flow through the page. A child element 
 
 ### font-family
 
-The font-family property specifies the font for an element. 
-There are two types of font family names: 
+The font-family property specifies the font for an element.
+There are two types of font family names:
 
 - **font family**: a specific font family (like Times New Roman or Arial)
 - **generic family**: a group of font families with a similar look (like Serif or Monospace)
 
 ![img](https://api.sololearn.com/DownloadFile?id=2721)
 
->Separate each value with a **comma** to indicate that they are alternatives. 
+>Separate each value with a **comma** to indicate that they are alternatives.
 >If the name of a font family is more than one word, it must be in quotation marks: **"Times New Roman"**.
-
-> The font-family property should hold several font names as a "fallback" system. When specifying a web font in a CSS style, add more than one font name, in order to avoid unexpected behaviors. If the client computer for some reason doesn't have the one you choose, it will try the next one. 
+> The font-family property should hold several font names as a "fallback" system. When specifying a web font in a CSS style, add more than one font name, in order to avoid unexpected behaviors. If the client computer for some reason doesn't have the one you choose, it will try the next one.
 
 ### font-size
 
@@ -253,9 +247,9 @@ p.xlarge {
 
 > Keywords are useful if you do not want the user to be able to increase the size of the font because it will adversely affect your site's appearance.
 
-Setting the font size in pixel values (**px**) is a good choice when you need pixel accuracy, and it gives you full control over the text size. 
+Setting the font size in pixel values (**px**) is a good choice when you need pixel accuracy, and it gives you full control over the text size.
 
-The **em** size unit is another way to set the font size (**em** is a relative size unit). 
+The **em** size unit is another way to set the font size (**em** is a relative size unit).
 
 `em = pixels / 16`
 
@@ -282,10 +276,10 @@ p.oblique {
 ### font-weight
 
 ```css
-p.light {   
+p.light {
    font-weight: lighter;
 }
-p.bold {   
+p.bold {
    font-weight: bold;
 }
 p.bolder {
@@ -350,7 +344,7 @@ td.bottom {
 }
 ```
 
-The vertical-align property also takes the following values: **baseline**, **sub**, **super**, **%** and **px** (or pt, cm). 
+The vertical-align property also takes the following values: **baseline**, **sub**, **super**, **%** and **px** (or pt, cm).
 
 ```css
 span.baseline {
@@ -368,7 +362,7 @@ span.pixel {
 ```
 
 Vertical align property does not act the same way for all elements.
-For example, some additional CSS styling is needed for div elements. 
+For example, some additional CSS styling is needed for div elements.
 
 ```css
 .main {
@@ -414,14 +408,14 @@ p.line-through {
 Another value of text-decoration property is **blink** which makes the text blink.
 
 ```css
-text-decoration: blink; 
+text-decoration: blink;
 ```
 
 > This value is valid but is deprecated and most browsers ignore it.
 
 ### text-indent
 
-The text-indent property specifies how much horizontal space should be left before the beginning of the first line of the text. Property values are **length** (px, pt, cm, em, etc.), **%**, and **inherit**. 
+The text-indent property specifies how much horizontal space should be left before the beginning of the first line of the text. Property values are **length** (px, pt, cm, em, etc.), **%**, and **inherit**.
 
 ```css
 p {
@@ -438,10 +432,10 @@ It takes four values: the first value defines the distance of the shadow in the 
 
 ```css
 h1 {
-   	color: blue;
-   	font-size: 30pt;
+    color: blue;
+    font-size: 30pt;
     text-shadow: 5px 2px 4px grey;
-   	/* x y blur-radius color */
+    /* x y blur-radius color */
 }
 ```
 
@@ -457,8 +451,8 @@ The example below creates a blue drop-shadow, two pixels higher than the main te
 
 ```css
 h1 {
-   font-size: 20pt;   
-   text-shadow: rgba(0,0,255,1) -1px -2px 0.5em; 
+   font-size: 20pt;
+   text-shadow: rgba(0,0,255,1) -1px -2px 0.5em;
 }
 ```
 
@@ -483,20 +477,21 @@ p.lowercase {
 ### letter-spacing
 
 The letter-spacing property specifies the **space between characters** in a text. The values can be set as:
+
 - **normal** defines the default style with no extra space between characters
 - **length** defines an extra space between characters using measurement units like px, pt, cm, mm, etc.
 - **inherit** inherits the property from its parent element
 
 ```css
-p.normal { 
-   letter-spacing: normal; 
+p.normal {
+   letter-spacing: normal;
 }
-p.positive { 
-   letter-spacing: 4px; 
+p.positive {
+   letter-spacing: 4px;
 }
-p.negative { 
-   letter-spacing: -1.5px; 
-} 
+p.negative {
+   letter-spacing: -1.5px;
+}
 ```
 
 ### word-spacing
@@ -504,13 +499,13 @@ p.negative {
 The word-spacing property specifies the **space between words** in a text. Just like the letter-spacing property, you can set the word-spacing values as **normal**, **length**, and **inherit**.
 
 ```css
-p.normal { 
+p.normal {
    word-spacing: normal;
 }
-p.positive { 
+p.positive {
    word-spacing: 20px;
 }
-p.negative { 
+p.negative {
    word-spacing: -5px;
 }
 ```
@@ -560,7 +555,6 @@ The image below illustrates the box model:
 ![img](https://api.sololearn.com/DownloadFile?id=2613)
 
 > The term "box model" is used when talking about design and layout.
-
 > The box model is also used to calculate the actual width and height of the HTML elements.
 
 ![img](https://api.sololearn.com/DownloadFile?id=3013)
@@ -578,7 +572,7 @@ In order to add a border to the element, you need to specify the **size**, **sty
 
 ```css
 p {
-   padding: 10px;    
+   padding: 10px;
    border: 5px solid green;
 }
 ```
@@ -620,7 +614,7 @@ To style a \<div\> element to have a total width and height of **100px**:
 
 ```css
 div {
-   border: 5px solid green;    
+   border: 5px solid green;
    width: 90px;
    height: 90px;
 }
@@ -632,7 +626,7 @@ The width and height of an element can be also assigned using **percents.**
 
 ```css
 div {
-   border: 5px solid green;    
+   border: 5px solid green;
    width: 100%;
    height: 90px;
 }
@@ -647,12 +641,12 @@ To set the minimum and maximum height and width of an element, you can use the f
 
 ```css
 p.first {
-   border: 5px solid green;    
-   min-height: 100px;       
+   border: 5px solid green;
+   min-height: 100px;
 }
 p.second {
-   border: 5px solid green;    
-   max-width: 100px;       
+   border: 5px solid green;
+   max-width: 100px;
 }
 ```
 
@@ -680,7 +674,6 @@ body {
 ```
 
 > The **url** specifies the path to the image file. Both relative and absolute paths are supported.
-
 > By default, a background-image is placed at the top-left corner of an element, and is repeated both vertically and horizontally to cover the entire element.
 
 ![img](https://api.sololearn.com/DownloadFile?id=2626)
@@ -874,7 +867,7 @@ table {
    border-collapse: separate;
    width: 100%;
    border: 1px solid gray;
-} 
+}
 td {
    border: 1px solid gray;
 }
@@ -1102,7 +1095,7 @@ img {
    margin-right: 10px;
 }
 p {
-   width: 120px;   
+   width: 120px;
    float: left;
 }
 ```
@@ -1117,7 +1110,7 @@ Elements that come after the floating element will flow around it. To avoid this
 .floating {
    float: right;
 }
-.clearing {    
+.clearing {
    clear: both;
 }
 ```
@@ -1164,7 +1157,7 @@ div {
 The **z-index** property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
 
 ```css
-.blue { 
+.blue {
    background-color: #8EC4D0;
    margin-bottom: 15px;
    width: 120px;
@@ -1191,7 +1184,7 @@ Assigning a higher z-index value to the blue div and a lower z-index value to th
 
 ```css
 .blue {
-   z-index: 3; 
+   z-index: 3;
    position: relative;
 }
 .red {
@@ -1207,4 +1200,3 @@ Assigning a higher z-index value to the blue div and a lower z-index value to th
 ---
 
 ## CSS3 Basics
-
