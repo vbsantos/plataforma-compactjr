@@ -3,31 +3,35 @@
 ## Adding JavaScript to a Web Page
 
 Let's start with adding JavaScript to a webpage.
-JavaScript on the web lives inside the **HTML** document.
-In HTML, JavaScript code must be inserted between \<script> and \</script> tags, and can be placed in the HTML page's \<body> and \<head> sections.
+JavaScript on the web lives inside the **HTML** document. 
+In HTML, JavaScript code must be inserted between \<script> and \</script> tags, and can be placed in the HTML page's \<body> and \<head> sections. 
 
 ```html
 <html>
- <head>
-     <title>JavaScript Overview</title>
+	<head>
+    	<title>JavaScript Overview</title>
     </head>
-  <body>
+ 	<body>
         <!--Writes "Hello World!" on the browser-->
-   <script>
+ 		<script>
             //We can use HTML tags to format text in JavaScript
-    document.write("<h1>Hello World!</h1>");
-   </script>
-  </body>
-</html>
+ 			document.write("<h1>Hello World!</h1>");
+ 		</script>
+ 	</body>
+</html> 
 ```
 
+
+
 > Remember that the script, which is placed in the head section, will be executed before the \<body> is rendered. If you want to get elements in the body, it's a good idea to place your script at the end of the body tag.
+
 > The **document.write()** method should be used only for testing. Other output mechanisms appear in the upcoming lessons.
 
 You can place any number of scripts in an HTML document.
 Typically, the script tag is placed in the head of the HTML document.
 
 > There is also a \<noscript> tag. Its content will be shown if the client's browser doesn't support JS scripts.
+
 > It's a good idea to place scripts at the bottom of the <body> element.
 > This can improve page load, because HTML display is not blocked by scripts loading.
 
@@ -43,14 +47,14 @@ In the example below, we created an alert box inside the script tag, using the *
 
 ```html
 <html>
-  <head>
-   <title>Alert Box</title>
-   <script type="text/javascript">
-    alert("This is an alert box!");
-   </script>
-  </head>
-  <body>
-  </body>
+ 	<head>
+ 		<title>Alert Box</title>
+ 		<script type="text/javascript">
+ 			alert("This is an alert box!");
+ 		</script>
+ 	</head>
+ 	<body>
+ 	</body>
 </html>
 ```
 
@@ -72,12 +76,12 @@ On the .html file:
 
 ```html
 <html>
-  <head>
-   <title>external javascript file</title>
-   <script src="demo.js"></script>
-  </head>
-  <body>
-  </body>
+ 	<head>
+ 		<title>external javascript file</title>
+ 		<script src="demo.js"></script>
+ 	</head>
+ 	<body>
+ 	</body>
 </html>
 ```
 
@@ -90,15 +94,16 @@ alert("This is an alert box!");
 ```
 
 > The script will behave as if it were located exactly where the \<script> tag is located.
+
 >Placing a JavaScript in an external file has the following advantages:
 >
 >- It separates HTML and code.
 >- It makes HTML and JavaScript easier to read and maintain.
 >- Cached JavaScript files can speed up page loads.
->
+
 ## Basic Concepts
 
-### Variables and Data types
+###  Variables and Data types
 
 ![img](https://api.sololearn.com/DownloadFile?id=2741)
 
@@ -141,16 +146,54 @@ document.write(mystring1 + mystring2);
 
 > Numbers in quotes are treated as strings: "42" is not the number 42, it is a string that includes two characters, 4 and 2.
 
+### Diferença entre var, let e const
+
+#### Hoisting 
+
+Em JavaScript, toda variável é **“elevada/içada” (\*hoisting\*)** até o topo do seu contexto de execução. Esse mecanismo move as variáveis para o topo do seu escopo antes da execução do código.
+
+É por esse mesmo motivo que “é possível usar uma variável antes dela ter sido declarada”: em tempo de execução a variável será elevada (*hoisting*) e tudo funcionará corretamente.
+
+#### var
+
+`var` é variável com **escopo global**.
+
+```javascript
+void function(){ 
+    console.log(mensagem); 
+}();
+var mensagem;
+```
+
+#### let e const
+
+`let` é variável e `const` é constante, ambas com **escopo de bloco**.
+
+```javascript
+var exibeMensagem = function() {
+     if(true) { 
+         var escopoFuncao = 'Caelum'; 
+         let escopoBloco = 'Alura';
+
+        console.log(escopoBloco); // Alura 
+    } 
+    console.log(escopoFuncao); // Caelum 
+    console.log(escopoBloco);
+}
+```
+
+![img](http://www.constletvar.com/const-vs-let-vs-var.png)
+
 ### Else-if
 
 ```javascript
 var course = 1;
 if (course == 1) {
-  document.write("<h1>HTML Tutorial</h1>");
+ 	document.write("<h1>HTML Tutorial</h1>");
 } else if (course == 2) {
-  document.write("<h1>CSS Tutorial</h1>");
+ 	document.write("<h1>CSS Tutorial</h1>");
 } else {
-  document.write("<h1>JavaScript Tutorial</h1>");
+ 	document.write("<h1>JavaScript Tutorial</h1>");
 }
 ```
 
@@ -159,49 +202,82 @@ if (course == 1) {
 ```javascript
 var day = 2;
 switch (day) {
-  case 1:
-   document.write("Monday");
-   break;
-  case 2:
-   document.write("Tuesday");
-   break;
-  case 3:
-   document.write("Wednesday");
-   break;
-  default:
-   document.write("Another day");
+ 	case 1:
+ 		document.write("Monday");
+ 		break;
+ 	case 2:
+ 		document.write("Tuesday");
+ 		break;
+ 	case 3:
+ 		document.write("Wednesday");
+ 		break;
+ 	default:
+ 		document.write("Another day");
 }
 ```
 
 ### Loops
 
+#### for, while, do .. while
+
 ```javascript
 for (i=1; i<=5; i++) {
-  document.write(i + "<br />");
+ 	document.write(i + "<br />");
 }
 //---------------------
 var i=0;
 while (i<=10) {
-  document.write(i + "<br />");
-  i++;
+ 	document.write(i + "<br />");
+ 	i++;
 }
 //---------------------
 var i=20;
 do {  
-  document.write(i + "<br />");
-  i++;  
+ 	document.write(i + "<br />");
+ 	i++;  
 }
-while (i<=25);
+while (i<=25); 
 ```
 
 > **Break**: The break statement "jumps out" of a loop and continues executing the code after the loop.
+
 > **Continue**: The continue statement breaks only one iteration in the loop, and continues with the next iteration.
+
+#### forEach
+
+```javascript
+var carros = [{modelo: 'Corsa', marca: 'Chevrolet'}, {modelo: 'Punto', marca: 'Fiat'}] // array de objetos
+
+carros.forEach((carro) => {
+    console.log(carro.modelo)
+}) // Corsa Punto
+```
+
+#### for .. in
+
+```javascript
+var carros = [{modelo: 'Corsa', marca: 'Chevrolet'}, {modelo: 'Punto', marca: 'Fiat'}] // array de objetos
+
+for(let i in carros)
+    console.log(carros[i].modelo)
+) // Corsa Punto
+```
+
+#### for .. of
+
+```javascript
+var carros = [{modelo: 'Corsa', marca: 'Chevrolet'}, {modelo: 'Punto', marca: 'Fiat'}] // array de objetos
+
+for(let carro in carros)
+    console.log(carro.modelo)
+) // Corsa Punto
+```
 
 ### Functions
 
 ```javascript
 function sayHello(name) {
-  alert("Hi, " + name);
+ 	alert("Hi, " + name);
 }
 sayHello("David");
 sayHello("Sarah");
@@ -213,7 +289,7 @@ sayHello("John");
 An alert box is used when you want to ensure that information gets through to the user. When an alert box pops up, the user must click OK to proceed. Takes a single parameter, which is the text displayed in the popup box.
 
 ```javascript
-alert("Do you really want to leave this page?");
+alert("Do you really want to leave this page?"); 
 ```
 
 ![img](https://api.sololearn.com/DownloadFile?id=2760)
@@ -226,8 +302,7 @@ A **prompt box** is often used to have the user input a value before entering a 
 When a prompt box pops up, the user will have to click either OK or Cancel to proceed after entering the input value.
 If the user clicks OK, the box **returns the input value**. If the user clicks Cancel, the box returns **null**.
 
-The **prompt()** method takes **two parameters**.
-
+The **prompt()** method takes **two parameters**. 
 - The first is the label, which you want to display in the text box.
 - The second is a default string to display in the text box (optional).
 
@@ -249,10 +324,10 @@ If the user clicks OK, the box returns **true**. If the user clicks Cancel, the 
 ```javascript
 var result = confirm("Do you really want to leave this page?");
 if (result == true) {
-  alert("Thanks for visiting");
+ 	alert("Thanks for visiting");
 }
 else {
-  alert("Thanks for staying with us");
+ 	alert("Thanks for staying with us");
 }
 ```
 
@@ -274,9 +349,9 @@ JavaScript variables are containers for data values. **Objects** are variables t
 
 ```javascript
 var person = { //These values are called properties
-  name: "John",
-    age: 31,
-  favColor: "green",
+ 	name: "John",
+    age: 31, 
+ 	favColor: "green",
     height: 183
 }; //Creating a object like that doesn't allows you to create multiple instances, it needs a constructor.
 ```
@@ -330,11 +405,11 @@ document.write(p2.name); // Outputs "Amy"
 
 ```javascript
 function person(name, age) {
-  this.name = name;  
-  this.age = age;
-  this.changeName = function (name) {
-   this.name = name;
-  }
+ 	this.name = name;  
+ 	this.age = age;
+ 	this.changeName = function (name) {
+ 		this.name = name;
+ 	}
 }
 
 var p = new person("David", 21);
@@ -346,12 +421,12 @@ You can also define the function outside of the constructor function and associa
 
 ```javascript
 function person(name, age) {//constructor
-  this.name= name;  
-  this.age = age;
-  this.yearOfBirth = bornYear;
+ 	this.name= name;  
+ 	this.age = age;
+ 	this.yearOfBirth = bornYear;
 }
 function bornYear() {//method
-  return 2016 - this.age;
+ 	return 2016 - this.age;
 }
 ```
 
@@ -365,7 +440,7 @@ The **this** keyword is used to access the *age* property of the object, which i
 ### The Array Object
 
 ```javascript
-var courses = new Array("HTML", "CSS", "JS");
+var courses = new Array("HTML", "CSS", "JS"); 
 var course = courses[0]; // HTML
 courses[1] = "C++"; //Changes the second element
 document.write(courses[10]); //Outputs "undefined"
@@ -423,6 +498,7 @@ document.write(person["age"]);
 ```
 
 > As the person array is treated as an object, the standard array methods and properties will produce incorrect results. For example, **person.length** will return 0.
+
 > If you use a named index, JavaScript will redefine the array to a standard object.
 
 ### The Math Object
@@ -443,7 +519,7 @@ The Math object contains a number of methods that are used for calculations:
 ![img](https://api.sololearn.com/DownloadFile?id=2769)
 
 ```javascript
-var number = Math.sqrt(4);
+var number = Math.sqrt(4); 
 document.write(number);
 //Outputs 2
 ```
@@ -491,7 +567,7 @@ new Date(dateString)
 new Date(year, month, day, hours, minutes, seconds, milliseconds)
 
 //Fri Jan 02 1970 00:00:00
-var d1 = new Date(86400000);
+var d1 = new Date(86400000); 
 
 //Fri Jan 02 2015 10:42:00
 var d2 = new Date("January 2, 2015 10:42:00");
@@ -501,6 +577,7 @@ var d3 = new Date(88,5,11,11,42,0,0);
 ```
 
 > JavaScript dates are calculated in milliseconds from 01 January, 1970 00:00:00 Universal Time (UTC). One day contains 86,400,000 millisecond.
+
 >JavaScript counts months from 0 to 11. January is 0, and December is 11.
 >Date objects are static, rather than dynamic. The computer time is ticking, but date objects don't change, once created.
 
@@ -554,10 +631,10 @@ These three methods are the most commonly used for selecting HTML elements:
 
 ```javascript
 //finds element by id
-document.getElementById(id)
+document.getElementById(id) 
 
 //finds elements by class name
-document.getElementsByClassName(name)
+document.getElementsByClassName(name) 
 
 //finds elements by tag name
 document.getElementsByTagName(name)
@@ -640,7 +717,7 @@ We can, for example, select all child nodes of an element and change their conte
 
 ## Changing Elements
 
-Once you have selected the element(s) you want to work with, you can change their attributes.
+Once you have selected the element(s) you want to work with, you can change their attributes. 
 As we have seen in the previous lessons, we can change the text content of an element using the **innerHTML** property.
 Similarly, we can change the attributes of elements.
 For example, we can change the **src** attribute of an image:
@@ -668,7 +745,7 @@ el[0].href = "http://www.sololearn.com";
 ### Changing Style
 
 The style of HTML elements can also be changed using JavaScript.
-All style attributes can be accessed using the **style** object of the element.
+All style attributes can be accessed using the **style** object of the element. 
 
 For example:
 
@@ -683,14 +760,14 @@ For example:
 
 The code above changes the text **color** and **width** of the div element.
 
->All CSS properties can be set and modified using JavaScript. Just remember, that you cannot use dashes (-) in the property names: these are replaced with camelCase versions, where the compound words begin with a capital letter.
+>All CSS properties can be set and modified using JavaScript. Just remember, that you cannot use dashes (-) in the property names: these are replaced with camelCase versions, where the compound words begin with a capital letter. 
 >For example: the **background-color** property should be referred to as **backgroundColor**.
 
 ## Adding & Removing Elements
 
 Use the following methods to create new nodes:
 element.**cloneNode**() clones an element and returns the resulting node.
-document.**createElement**(element) creates a new element node.
+document.**createElement**(element) creates a new element node. 
 document.**createTextNode**(text) creates a new text node.
 
 For example:
@@ -764,28 +841,33 @@ parent.replaceChild(p, child);
 </script>
 ```
 
-## Asynchronous programming: Promises
+## Asynchronous programming
 
-A **Promise** is a better way for asynchronous programming when compared to the common way of using a **setTimeout**() type of method.
+### Callback
+
+É uma função dada como parâmetro de uma função asíncrona e que é executada quando a função  é completada ou ocorre erro.
 
 ```javascript
-setTimeout(function() {
-  console.log("Work 1");
- setTimeout(function() {
-   console.log("Work 2");
-  }, 1000);
-}, 1000);
-console.log("End");
+const callback = (err, contents) => {
+    console.log(err, String(contents))
+}
+fs.readFile("arquivo.txt", callback)
+
+// ou
+
+fs.readFile("arquivo.txt", (err, contents) => {
+    console.log(err, String(contents))
+})
 ```
 
-It prints "End", "Work 1" and "Work 2" in that order (the work is done asynchronously). But if there are more events like this, the code becomes very complex.
+### Promise
 
 A **promise** can be created as follows:
 
 ```javascript
 new Promise(function(resolve, reject) {
-  // Work
-  if (success)
+ 	// Work
+ 	if (success)
         resolve(result);
     else
         reject(Error("failure"));
@@ -798,37 +880,115 @@ For Example:
 
 ```javascript
 function asyncFunc(work) {
-  return new Promise(function(resolve, reject) {
-   if (work === "")
-    reject(Error("Nothing"));
-   setTimeout(function() {
-    resolve(work);
-   }, 1000);
-  });
+ 	return new Promise(function(resolve, reject) {
+ 		if (work === "")
+ 			reject(Error("Nothing"));
+ 		setTimeout(function() {
+ 			resolve(work);
+ 		}, 1000);
+ 	});
 }
 
 asyncFunc("Work 1") // Task 1
 .then(function(result) {
-  console.log(result);
-  return asyncFunc("Work 2"); // Task 2
+ 	console.log(result);
+ 	return asyncFunc("Work 2"); // Task 2
 }, function(error) {
-  console.log(error);
+ 	console.log(error);
 })
 .then(function(result) {
-  console.log(result);
+ 	console.log(result);
 }, function(error) {
-  console.log(error);
+ 	console.log(error);
 });
 console.log("End");
+```
+
+Another Example:
+
+```javascript
+const readFile = file => new Promise((resolve, reject) => {
+    fs.readFile(file, (err, contents) => {
+        if (err) {
+            reject(err)
+        }
+        else {
+            resolve(contents)
+        }
+    })
+})
+
+readFile('arquivo.txt')
+	.then(contents => {
+    	console.log(String(contents))
+    	return readFile('arquivo2.txt')
+	})
+	.then(contents => {
+    	console.log(String(contents))
+	})
+```
+
+#### Promises methods
+
+```javascript
+const foo = async() => {
+	const a = await getStuff(1); // 1s
+	const b = await getStuff(2); // 1s
+	return [a,b];
+} // 2s
+```
+
+```javascript
+const foo = async() => {
+	const a = getStuff(1); // 1s
+	const b = getStuff(2); // 1s
+	const smoothie = await Promise.all([a,b]);
+    return smoothie;
+} // ~ 1s
+```
+
+### Async/Await
+
+> Açucar Sintático para Promises
+
+Fetch retorna uma **promise**. É possível criarmos ***funções assíncronas***, que irão esperar a **promise** resolver, antes de continuar com o código.
+
+```javascript
+async function fetchPokemons(url) {
+    const response = await fetch(url);
+    const json = await response.json();
+    return json;
+}
+
+const x = fetchPokemons("https://www.canalti.com.br/api/pokemon.json");
+
+x.then(response => { // simplesmente console.log retornaria uma promise
+    console.log(response);
+})
+```
+
+## try .. catch
+
+```javascript
+const badCode = async() => {
+	try {
+		const a = getStuff(1);
+		const b = getStuff(2);
+		throw 'BROKEN!';
+		return [a,b]
+	} catch (err) {
+		console.log(err)
+	}
+}
 ```
 
 ## Iterator & Generators
 
 ```javascript
 function* idMaker() {
-  let index = 0;
-  while (index < 5)
-   yield index++;
+ 	let index = 0;
+ 	while (index < 5)
+ 		yield index++;
 }
 var gen = idMaker();
 
@@ -844,7 +1004,7 @@ console.log(gen.next().value); //n aparece
 We can exit and re-enter generator functions later. Their variable bindings (context) will be saved across re-entrances. They are a very powerful tool for asynchronous programming, especially when combined with Promises. They can also be useful for creating loops with special requirements.
 
 We can nest **generator functions** inside each other to create more complex structures and pass them arguments while we are calling them.
-The example below will show a useful case of how we can use **generator functions** and **Symbol.iterators** together.
+The example below will show a useful case of how we can use **generator functions** and **Symbol.iterators** together. 
 
 **Example:**
 
@@ -892,8 +1052,8 @@ var elements = [
   'Beryllium'
 ];
 
-elements.map(function(element) {
-  return element.length;
+elements.map(function(element) { 
+  return element.length; 
 }); // esta sentença retorna o array: [8, 6, 7, 9]
 
 // A função regular acima pode ser escrita como a arrow function abaixo
@@ -916,8 +1076,8 @@ Pega as propriedades de um objeto ou itens de um array e transforma em variávei
 
 ```javascript
 function handleMouseMove(event) {
- const clientX = event.clientX;
- const clientY = envent.clientY;
+	const clientX = event.clientX;
+	const clientY = envent.clientY;
     console.log(clientX, clientY);
 }
 // Destructuring
@@ -1012,8 +1172,8 @@ GET:
 
 ```javascript
 fetch("https://www.canalti.com.br/api/pokemons.json") // Tem que esperar o retorno da API
- .then(response => response.json())    // Não é transformado em json na hora, é assíncrono
- .then(jsonBody => console.log(jsonBody))  // por isso tem que por outro "then"
+	.then(response => response.json()) 			// Não é transformado em json na hora, é assíncrono
+	.then(jsonBody => console.log(jsonBody)) 	// por isso tem que por outro "then"
 ```
 
 POST:
@@ -1027,34 +1187,6 @@ const requisicao = fetch("https://www.canalti.com.br/api/addpokemon", {
         "Content-Type": "application/json"
     },
     body: JSON.stringufy(data);
-})
-```
-
-### Consumindo uma API com A.J.A.X. (Asynchronous JavaScript XML)
-
-Referências:
-
-- [Requisições Ajax com JavaScript](https://www.youtube.com/watch?v=il0Dog9Y4xs)
-
-```javascript
-
-```
-
-### Async/Await
-
-Fetch retorna uma **promise**. É possível criarmos ***funções assíncronas***, que irão esperar a **promise** resolver, antes de continuar com o código.
-
-```javascript
-async function fetchPokemons(url) {
-    const response = await fetch(url);
-    const json = await response.json();
-    return json;
-}
-
-const x = fetchPokemons("https://www.canalti.com.br/api/pokemon.json");
-
-x.then(response => {  // simplesmente console.log retornaria uma promise
-    console.log(response);
 })
 ```
 
@@ -1147,3 +1279,4 @@ class ActiveSmoothScroll extends SmoothScroll {
 
 const scroll = new ActiveSmoothScroll("a[href^='#']", "section");
 ```
+
